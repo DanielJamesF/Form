@@ -11,20 +11,17 @@
     <h1>Name and Age form</h1>
 
     <div id="app">
-        <form id="form">
-            <label for="Name">Name:
-                <input v-model="name" type="text">
-            </label>
-            <br><br>
-            <label for="Age">Age:
-                <input v-model="age" type="number">
-            </label>
-            <button type="button" @click="enterDetails">button
-                <span v-if="age > 17"></span>
-                <span v-else></span>
+        <form>
+            <label>Name: </label>
+            <input v-model="name" type="text" placeholder="Enter name" id="name">
+            <label>Age:</label>
+            <input v-model="age" type="number" placeholder="Enter age" id="age">
+            <button type="button" @click="validate">
+                Press me
             </button>
         </form>
-    </div>
+        <p id="output"></p>
+    </div> 
 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="./script/code.js"></script>
